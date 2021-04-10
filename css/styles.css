@@ -325,5 +325,19 @@ figure .icono {
   figcaption .tooltip {
     font-size: 12px;
   }
+  figcaption .icono {
+    top: 32px;
+  }
+  .tooltip {
+    position: static;
+    opacity: 1;
+    width: 100%;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .tooltip::after {
+    content: "";
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
