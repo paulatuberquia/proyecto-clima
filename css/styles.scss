@@ -2,12 +2,19 @@ body{
     /*background: #43cea2;  /* fallback for old browsers */
    /* background: -webkit-linear-gradient(to right, #d6c250, #c4d467);  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to right, #70d0dd, #4697a5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-image:url("https://upload.wikimedia.org/wikipedia/commons/4/49/MAPA_MUNDI_AZUL.png") ;
-    
+    background-image:url("https://upload.wikimedia.org/wikipedia/commons/4/49/MAPA_MUNDI_AZUL.png");
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
    /*background-image: ('Mapa-Mundi.jpg');*/
     transition: .3s ease all;
    &.oscuro{
     background-image:url("https://upload.wikimedia.org/wikipedia/commons/3/3f/MAPAMUNDI_NEGRO_VALLVE.png");
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
    /* background: #066144;  
     background: -webkit-linear-gradient(to right, #7e6f1c, #687520);  
     background: linear-gradient(to right, #1e6770, #14535e);*/
