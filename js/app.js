@@ -2,6 +2,43 @@ const container = document.querySelector('.container');
 const resultado = document.querySelector('#resultado');
 const formulario = document.querySelector('#formulario');
 const btnBoton = document.querySelector('#boton');
+const icono = document.querySelector('#icono');
+const tooltip = document.querySelector('#tooltip');
+
+const calcularPosicionT = () => {
+
+    const x = icono.offsetLeft;
+    const y = icono.offsetTop;
+
+    const anchoToolti = tooltip.clientWidth;
+    const altoToolti = tooltip.clientHeight;
+
+    const izq = x - (anchoToolti/2) ;
+    const arb = y - altoToolti - 20;
+
+
+    tooltip.style.left = '${izq}px';
+    tooltip.style.top = '${arb}px';
+
+};
+
+window.addEventListener('load', () => calcularPosicionT());
+window.addEventListener('rezise', () => calcularPosicionT());
+
+icono.addEventListener('mouseenter', () => {
+    tooltip.classList.add('activo');
+    calcularPosicionT();
+});
+
+let timer;
+icono.addEventListener('mouseleave', () => {
+    timer = setTimeout(() => {
+        tooltip.classList.remove('activo');
+    } ,500);
+});
+
+tooltip.addEventListener('mouseenter', () => clearTimeout(timer));
+tooltip.addEventListener('mouseleave', () => tooltip.classList.remove('activo'));
 
 btnBoton.addEventListener('click', () => {
     document.body.classList.toggle('oscuro');
