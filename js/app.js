@@ -287,7 +287,7 @@ anime.timeline({loop: true})
     delay: 500
   });
 
-
+//Que detalle tan bonito este Tooltip
 const icono = document.querySelector('#icono');
 const tooltip = document.querySelector('#tooltip');
 
@@ -326,7 +326,7 @@ icono.addEventListener('mouseleave', () => {
 tooltip.addEventListener('mouseenter', () => clearTimeout(timer));
 tooltip.addEventListener('mouseleave', () => tooltip.classList.remove('activo'));
 
-const btnBoton = document.querySelector('#boton');
+const btnBoton = document.querySelector('#boton');//revisa las imagens que sean iguales para que no se note un cambio de imagen sino de color ajustalas a los msmos pixeles o mejor aun al mismo ratio
 
 btnBoton.addEventListener('click', () => {
     document.body.classList.toggle('oscuro');
